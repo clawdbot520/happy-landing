@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>小朋友的開心小天地 ✨</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -73,8 +75,12 @@
 
     <script src="script.js"></script>
     <script>
-        // 檢查登入狀態
-        checkLoginStatus();
+        // Safari 兼容处理
+        try {
+            checkLoginStatus();
+        } catch (e) {
+            console.error('JavaScript error:', e);
+        }
     </script>
 </body>
 </html>
